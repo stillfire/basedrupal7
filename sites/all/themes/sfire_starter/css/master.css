@@ -1,0 +1,39 @@
+@import 'reset.css';
+@import 'text.css';
+@import url(mobile.css) screen and (max-width:760px);
+@import url(720.css) screen and (min-width:761px) and (max-width:980px);
+@import url(960.css) screen and (min-width:981px);
+@import url(wide.css) screen and (min-width:1281px);
+
+/*
+USE ALL VIEWPORTS
+
+@import url(mobile.css) screen and (max-width:760px);
+@import url(720.css) screen and (min-width:761px) and (max-width:980px);
+@import url(960.css) screen and (min-width:981px) and (max-width:1280px);
+@import url('1200.css') screen and (min-width:1281px) (max-width:1600px);
+@import url('1560.css') screen and (min-width:1601px) (max-width:1940px);
+@import url('1920.css') screen and (min-width:1941px) (max-width:2540);
+@import url('2520.css') screen and (min-width:2541px);*/
+
+/*
+
+Use up to Normal view port (960px) with control over wider elements (no grid on wide view - maintains 960 grid)
+
+@import url(mobile.css) screen and (max-width:760px);
+@import url(720.css) screen and (min-width:761px) and (max-width:980px);
+@import url(960.css) screen and (min-width:981px);
+@import url(wide.css) screen and (min-width:1281px);
+
+*/
+
+/*
+
+Use all 4 views Mobile, Narrow, Normal, Wide
+
+@import url(mobile.css) screen and (max-width:760px);
+@import url(720.css) screen and (min-width:761px) and (max-width:980px);
+@import url(960.css) screen and (min-width:981px) and (max-width:1280px);
+@import url(1200.css) screen and (min-width:1281px);
+
+*/

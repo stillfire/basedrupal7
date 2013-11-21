@@ -1,0 +1,109 @@
+/* CSS Document */
+
+/* BASIC FORMATTING */
+
+body {
+	font-size:15px;	
+	font-family:Verdana, Geneva, sans-serif;
+	padding-top: 20px;
+}
+
+
+
+a:link, a:visited {
+	color:#333;	
+}
+
+a:hover {
+	color:black;	
+}
+
+#page-wrapper {
+	width:960px;
+	margin:0 auto;	
+}
+
+.clearfix {
+	clear:both;
+}
+
+h1#page-title {
+	font-size:150%;
+	font-weight:bold;	
+	margin-top:15px;
+}
+
+.section {
+	padding:5px;
+	border:2px solid black;	
+}
+#content div.section {
+	padding:0px;
+	border:none;	
+}
+
+#leftCol{
+	float: left;
+	display: block;
+}
+
+#content {
+	float:right;
+	width:625px;	
+	padding:5px;
+	border:2px solid black;	
+}
+
+#content H1, .block H1{font-size: 20px; font-weight: bold; text-transform: uppercase;}
+#content H2, .block H2{font-size: 18px; font-weight: bold;}
+#content H3, .block H3{font-size: 16px; font-weight: bold;}
+#content H4, .block H4{font-size: 14px; font-weight: bold;}
+#content P, .block P{ font-size: 12px; line-height: 20px; }
+#content P a, .block P a{ color:#00F; }
+#content UL{ list-style: disc; }
+#content OL{ list-style: decimal; }
+#content UL, #content OL{ margin: 0 0 0 10px; font-size: 12px; }
+#content UL LI, #content OL LI { margin: 0 0 0 20px; }
+#content STRONG{ font-weight: bold; }
+
+.region-sidebar-first {
+	float:left;
+	width:292px;
+	margin-right:5px;
+
+	padding:8px;
+	border:2px solid black;		
+}
+
+.region-sidebar-second {
+	float:left;
+	width:292px;
+	margin-right:5px;
+	margin-top: 10px;
+	padding:8px;
+	border:2px solid black;		
+}
+
+p, ul, h1, h2, h3, h4, .section {
+	margin-bottom:15px;	
+}
+
+.breadcrumb {
+	display:inline;
+	margin-bottom:15px;
+	font-size: 10px;
+}
+
+#bucketList{ margin-top: 10px; margin-left: -5px; }
+.buckets{
+	display: block; 
+	float: left;
+	width: 302px;	
+	margin-left: 5px;
+}
+
+.clear{ clear: both; line-height: 0; }
+
+/* SUPERGFISH VOEWRITE STYLES */
+.sf-menu.sf-style-white a { border: none !important;} 
+.sf-menu.sf-style-white li, .sf-menu.sf-style-white.sf-navbar {  background: #fff !important; }

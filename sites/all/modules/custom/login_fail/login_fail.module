@@ -1,0 +1,24 @@
+<?php 
+
+function login_fail_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'user_login_block') {
+	 //debug($form_state, '$form_state', TRUE);
+     $form['#validate'][] = 'my_custom_login_val';
+  }
+
+}
+
+
+function my_custom_login_val($form, &$form_state) {
+	
+	$form = form_get_error($form['name']) . form_get_error($form['pass']);
+
+	if($form != '') {
+	
+	$_GET['destination'] = 'user';
+	$GLOBALS['destination'] = 'user';
+	drupal_goto('user');
+	
+	}
+  
+}

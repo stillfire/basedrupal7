@@ -1,0 +1,65 @@
+<?php
+
+function bu_init() {
+  drupal_add_js(bu_get_settings(), 'setting');
+  drupal_add_js(drupal_get_path('module', 'bu') . '/bu.js', array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE));
+}
+
+function bu_menu() {
+  $items = array();
+  $items['admin/config/services/bu'] = array(
+    'title' => 'Browser update',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('bu_admin_settings'),
+    'access arguments' => array('administer browser-update'),
+    'file' => 'bu.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+function bu_permission() {
+  return array(
+    'administer browser-update' => array(
+      'title' => t('Administer Browser-update'),
+      'description' => t('Administer Browser-update settings.'),
+    ),
+  );
+}
+
+function bu_get_settings() {
+  return array(
+    'bu' => array(
+      'firefox' => (float) bu_get_versions('firefox', variable_get('bu_browsers_firefox', 5)),
+      'ie' => (float) bu_get_versions('ie', variable_get('bu_browsers_ie', 3)),
+      'opera' => (float) bu_get_versions('opera', variable_get('bu_browsers_opera', 2)),
+      'safari' => (float) bu_get_versions('safari', variable_get('bu_browsers_safari', 4)),
+      'text' => variable_get('bu_settings_text', ''),
+      'reminder' => (int) variable_get('bu_settings_reminder', 3),
+      'debug' => (bool) variable_get('bu_settings_debug', 0),
+      'blank' => (bool) variable_get('bu_settings_blank', 0),
+    ),
+  );
+}
+
+function bu_get_versions($browser, $key = NULL) {
+  switch ($browser) {
+    case 'firefox':
+      $return = array('3', '3.5', '3.6', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15');
+      break;
+    case 'ie':
+      $return = array('6', '7', '8', '9');
+      break;
+    case 'opera':
+      $return = array('10.1', '10.5', '10.6', '11');
+      break;
+    case 'safari':
+      $return = array('3', '3.2', '4', '5');
+      break;
+  }
+  if (isset($key)) {
+    //return $return[$key];
+  }
+
+  return $return;
+}

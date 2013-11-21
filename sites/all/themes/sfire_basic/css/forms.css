@@ -1,0 +1,47 @@
+/* CSS Document */
+
+/* Default Styling for WebForms module 
+
+Change form#webform-client-form-3 to match the form ID you are styling.
+
+*/
+
+form#webform-client-form-3 {
+	width:540px;
+	position:relative;
+}
+
+form#webform-client-form-3 label {
+	width:200px;
+	padding:5px;
+	display:block;
+	float:left;
+}
+
+form#webform-client-form-3 .webform-component-textfield input, form#webform-client-form-3 .webform-component-email input {
+	width:300px;
+}
+
+form#webform-client-form-3 .form-item input, form#webform-client-form-3 .form-item textarea {
+	border:1px solid #ccc;
+	padding:5px;	
+}
+
+form#webform-client-form-3 textarea {
+	position:relative;
+	left:16px;
+	width:311px;
+}
+
+form#webform-client-form-3 .form-actions {
+	text-align:right;
+	padding-right:3px;
+}
+
+.webform-confirmation {
+	border:2px solid #090;
+	padding:10px;
+	background-color:#B3FFC4;
+	color:#090;
+	font-weight:bold;
+}
