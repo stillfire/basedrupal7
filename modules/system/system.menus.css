@@ -68,7 +68,6 @@ ul.primary {
   border-bottom: 1px solid #bbb;
   border-collapse: collapse;
   height: auto;
-  line-height: normal;
   list-style: none;
   margin: 5px;
   padding: 0 0 0 1em; /* LTR */
